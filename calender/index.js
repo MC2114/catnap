@@ -1,4 +1,6 @@
 import {ObjectData} from "./database.js"
+import NavBar from "../homescreen/navbar.js"
+    
 const stratTime = document.getElementById("startTime");
 const endTime = document.getElementById("endTime");
 const addButton = document.getElementById("addButton")
@@ -11,6 +13,7 @@ EventDB.openDatabase();
 render()
 
 function render(){
+    document.body.prepend(NavBar());
     const allEvent = EventDB.getAllTasks();
     allEvent
     .then(eventArr => {
