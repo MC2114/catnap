@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notification Test</title>
+    <title>Task Reminder App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button onclick="notifyMe()">Notify Me</button>
+    <!-- Main content of your web app -->
+    <h1>Welcome to the Task Reminder App</h1>
+   <!-- Button to Show the Modal (for Testing) -->
+    <button onclick="showTaskModal(tasks)">Show Task Reminder</button>
+
+    <!-- Modal Structure -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <h2>Suggested Tasks</h2>
+            <ul id="taskList"></ul> <!-- This will hold the list of tasks with Accept buttons -->
+            <button onclick="snoozeTasks()">Snooze</button> <!-- Snooze button at the bottom -->
+        </div>
+    </div>
+
+    <!-- JavaScript files -->
     <script src="notifications.js"></script>
 </body>
 </html>
